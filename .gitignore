@@ -1,0 +1,56 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.tfvars
+*.tfvars.json
+
+# Keep provider lock files committed for reproducible Terraform runs
+!**/.terraform.lock.hcl
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging / build outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# IDE (JetBrains)
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/**/dataSources*
+
+# OS files
+.DS_Store
+Thumbs.db
+
