@@ -1,0 +1,379 @@
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #e5e7eb;
+  background: #0f172a;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ─── Layout ────────────────────────────────────────── */
+
+.page {
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ─── Freshness indicator ────────────────────────────── */
+
+.freshness {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border: 1px solid #14532d;
+  border-radius: 20px;
+  background: #052e16;
+}
+
+.freshness-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+}
+
+/* ─── Card ───────────────────────────────────────────── */
+
+.card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ─── Form elements ──────────────────────────────────── */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 16px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+label:first-child {
+  margin-top: 0;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+}
+
+/* ─── Language selector ──────────────────────────────── */
+
+.lang-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lang-search {
+  border-color: #334155;
+}
+
+.lang-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #1e293b;
+  color: #a5b4fc;
+  border: 1px solid #312e81;
+}
+
+.lang-no-results {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ─── Actions ────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #818cf8;
+}
+
+button.secondary {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #293548;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Error ──────────────────────────────────────────── */
+
+.error {
+  background: #450a0a;
+  border: 1px solid #7f1d1d;
+  color: #fecaca;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ─── Summary card ───────────────────────────────────── */
+
+.summary-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1040 100%);
+  border-color: #312e81;
+}
+
+.summary-icon {
+  font-size: 56px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.summary-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.summary-location {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.summary-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+/* ─── Badges ─────────────────────────────────────────── */
+
+.weather-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #0c2a20;
+  color: #6ee7b7;
+  border: 1px solid #065f46;
+  text-transform: capitalize;
+}
+
+.translated-badge {
+  margin-bottom: 10px;
+}
+
+/* ─── Translation card ───────────────────────────────── */
+
+.translation-card {
+  border-color: #312e81;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1040 100%);
+}
+
+.translation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.copy-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  background: #1e293b;
+  color: #a5b4fc;
+  border-radius: 8px;
+}
+
+.copy-btn:hover:not(:disabled) {
+  background: #293548;
+}
+
+.translation-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e2e8f0;
+  padding: 14px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+/* ─── Detail grid ────────────────────────────────────── */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 16px;
+  align-items: start;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: #64748b;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+.detail-value-highlight {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.detail-meta {
+  font-size: 12px;
+  color: #475569;
+  word-break: break-all;
+}
+
+/* ─── Content grid ───────────────────────────────────── */
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: auto;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 12px;
+  margin: 0;
+  color: #94a3b8;
+  max-height: 420px;
+}
+
+/* ─── Empty state ────────────────────────────────────── */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #475569;
+  font-size: 15px;
+  border: 1px dashed #1e293b;
+  border-radius: 20px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .summary-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .summary-icon {
+    font-size: 48px;
+  }
+}

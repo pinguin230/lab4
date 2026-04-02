@@ -46,6 +46,13 @@ resource "aws_iam_role_policy" "lambda_policy" {
           var.s3_bucket_arn,
           "${var.s3_bucket_arn}/*"
         ]
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "translate:TranslateText"
+        ]
+        Resource = "*"
       }
     ]
   })

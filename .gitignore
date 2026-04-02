@@ -2,6 +2,8 @@
 **/.terraform/*
 *.tfstate
 *.tfstate.*
+.terraform.tfstate.lock.info
+*.tfplan
 crash.log
 crash.*.log
 override.tf
@@ -39,9 +41,15 @@ htmlcov/
 # Packaging / build outputs
 build/
 dist/
+coverage/
+.vite/
 *.egg-info/
 .eggs/
 pip-wheel-metadata/
+
+# Local environment files
+.env
+.env.*
 
 # IDE (JetBrains)
 .idea/workspace.xml
@@ -50,6 +58,10 @@ pip-wheel-metadata/
 .idea/httpRequests/
 .idea/**/dataSources*
 
+# Local AI/tooling workspace
+.claude/
+
+modules/lambda/*.zip
 # OS files
 .DS_Store
 Thumbs.db

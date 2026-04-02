@@ -54,3 +54,8 @@ module "scheduler" {
   target_lambda_arn     = module.lambda_generator.function_arn
   target_lambda_name    = module.lambda_generator.function_name
 }
+
+module "frontend_site" {
+  source      = "../../modules/s3_static_site"
+  bucket_name = "${local.prefix}-frontend-site"
+}

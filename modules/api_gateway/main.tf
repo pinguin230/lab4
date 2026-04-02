@@ -1,6 +1,12 @@
 resource "aws_apigatewayv2_api" "this" {
   name          = var.api_name
   protocol_type = "HTTP"
+
+  cors_configuration {
+    allow_origins = ["*"]
+    allow_methods = ["GET", "OPTIONS"]
+    allow_headers = ["content-type"]
+  }
 }
 
 resource "aws_apigatewayv2_integration" "this" {
