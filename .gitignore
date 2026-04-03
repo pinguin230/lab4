@@ -66,3 +66,4 @@ modules/lambda/*.zip
 .DS_Store
 Thumbs.db
 
+envs
